@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>jquery | each</title>
+    <link
+      rel="stylesheet"
+      href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <script src="../lib/jquery-3.6.0.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <h1>each</h1>
+
+      <div class="card">
+        <div class="card_photo">
+          <img src="../images/group_02.jpg" alt="" />
+          <div class="sns">
+            <span class="share"><i class="xi-share-alt"></i></span>
+            <span><i class="xi-dribbble"></i></span>
+            <span><i class="xi-facebook"></i></span>
+            <span><i class="xi-github"></i></span>
+          </div>
+        </div>
+
+        <div class="card_info">
+          <h2>this is title</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique
+            amet voluptatibus quibusdam.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      var sns = $('.sns')
+      var item = $('.sns span')
+
+      sns.hover(
+        function () {
+          item.each(function (index) {
+            $(this).animate({ left: -(index * 50) }, 300)
+          })
+        },
+        function () {
+          $(this).animate({ left: 0 }, 300)
+        }
+      )
+    </script>
+  </body>
+</html>
