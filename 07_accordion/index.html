@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>jquery | accordion</title>
+    <link rel="stylesheet" href="./style.css" />
+    <script src="../lib/jquery-3.6.0.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Accordion</h1>
+
+      <div class="accordion">
+        <h2>This is title 1</h2>
+        <p class="content">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Non nobis et
+          repudiandae dignissimos officiis dolor, obcaecati, cum error molestias
+          dolores culpa blanditiis praesentium ad vero qui neque impedit
+          deleniti quas?
+        </p>
+
+        <h2>This is title 2</h2>
+        <p class="content">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Non nobis et
+          repudiandae dignissimos officiis dolor, obcaecati, cum error molestias
+          dolores culpa blanditiis praesentium ad vero qui neque impedit
+          deleniti quas?
+        </p>
+
+        <h2>This is title 3</h2>
+        <p class="content">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Non nobis et
+          repudiandae dignissimos officiis dolor, obcaecati, cum error molestias
+          dolores culpa blanditiis praesentium ad vero qui neque impedit
+          deleniti quas?
+        </p>
+      </div>
+    </div>
+
+    <script>
+      var title = $('.accordion h2')
+
+      title.eq(0).addClass('active').next().slideDown()
+    </script>
+  </body>
+</html>
