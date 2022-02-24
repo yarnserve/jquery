@@ -44,11 +44,15 @@
       sns.hover(
         function () {
           item.each(function (index) {
-            $(this).animate({ left: -(index * 50) }, 300)
+            $(this)
+              .stop()
+              .animate({ left: -(index * 50) }, 300)
           })
         },
         function () {
-          $(this).animate({ left: 0 }, 300)
+          item.each(function (index) {
+            $(this).stop().animate({ left: 0 }, 300)
+          })
         }
       )
     </script>
