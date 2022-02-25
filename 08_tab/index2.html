@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>jquery | tab2</title>
+    <link rel="stylesheet" href="./style2.css" />
+    <script src="../lib/jquery-3.6.0.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Tab 2</h1>
+
+      <ul class="tab">
+        <li><a href="#tab1">tab1</a></li>
+        <li><a href="#tab2">tab2</a></li>
+        <li><a href="#tab3">tab3</a></li>
+      </ul>
+
+      <div id="tab1" class="tab_content">
+        Tab1 Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure
+        facilis architecto delectus tempora reiciendis ad, placeat ex porro
+        cumque enim totam et obcaecati eveniet maxime exercitationem,
+        perspiciatis autem ut assumenda? Lorem ipsum dolor sit amet consectetur
+        adipisicing elit. Iure facilis architecto delectus tempora reiciendis
+        ad, placeat ex porro cumque enim totam et obcaecati eveniet maxime
+        exercitationem, perspiciatis autem ut assumenda?
+      </div>
+
+      <div id="tab2" class="tab_content">
+        Tab2 Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure
+        facilis architecto delectus tempora reiciendis ad, placeat ex porro
+        cumque enim totam et obcaecati eveniet maxime exercitationem,
+        perspiciatis autem ut assumenda?
+      </div>
+
+      <div id="tab3" class="tab_content">
+        Tab3 Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure
+        facilis architecto delectus tempora reiciendis ad, placeat ex porro
+        cumque enim totam et obcaecati eveniet maxime exercitationem,
+        perspiciatis autem ut assumenda? Lorem ipsum dolor sit amet consectetur
+        adipisicing elit. Iure facilis architecto delectus tempora reiciendis
+        ad, placeat ex porro cumque enim totam et obcaecati eveniet maxime
+        exercitationem, perspiciatis autem ut assumenda? Lorem ipsum dolor sit
+        amet consectetur adipisicing elit. Iure facilis architecto delectus
+        tempora reiciendis ad, placeat ex porro cumque enim totam et obcaecati
+        eveniet maxime exercitationem, perspiciatis autem ut assumenda?
+      </div>
+    </div>
+
+    <script>
+      var btns = $('.tab li')
+      var contents = $('.tab_content')
+
+      contents.hide().eq(0).show()
+      btns.eq(0).addClass('active')
+
+      btns.mouseover(function () {
+        btns.removeClass('active')
+        $(this).addClass('active')
+
+        contents.hide()
+
+        var activeTab = $(this).find('a').attr('href')
+        $(activeTab).fadeIn()
+      })
+    </script>
+  </body>
+</html>
