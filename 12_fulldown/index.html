@@ -32,10 +32,6 @@
               <a href="#">서비스</a>
               <ul>
                 <li><a href="#">서비스</a></li>
-                <li><a href="#">비지니스</a></li>
-                <li><a href="#">크리에이터</a></li>
-                <li><a href="#">개발자</a></li>
-                <li><a href="#">기획자</a></li>
               </ul>
             </li>
 
@@ -45,9 +41,6 @@
                 <li><a href="#">리서치</a></li>
                 <li><a href="#">기업윤리</a></li>
                 <li><a href="#">기업윤리규범</a></li>
-                <li><a href="#">상담센터</a></li>
-                <li><a href="#">프라이버시 센터</a></li>
-                <li><a href="#">라이브러리</a></li>
               </ul>
             </li>
 
@@ -65,8 +58,6 @@
               <ul>
                 <li><a href="#">기업지배구조</a></li>
                 <li><a href="#">주주구성</a></li>
-                <li><a href="#">이사회</a></li>
-                <li><a href="#">정관</a></li>
               </ul>
             </li>
 
@@ -336,8 +327,27 @@
       var gnb = header.find('.gnb')
       var headerHeight = header.innerHeight()
       var subMenuHeight = gnb.find('ul li').innerHeight()
+      var menucount = []
+      var paddingValue = 60
 
-      console.log(subMenuHeight)
+      gnb.find('ul').each(function () {
+        var liCount = $(this).find('li').length
+        menucount.push(liCount)
+      })
+
+      var maxMenuCount = Math.max.apply(null, menucount)
+      var autoHeight =
+        subMenuHeight * maxMenuCount + headerHeight + paddingValue
+
+      gnb
+        .on('mouseover', function () {
+          header.stop().animate({ height: autoHeight }, 300)
+        })
+        .on('mouseleave', function () {
+          header.stop().animate({ height: headerHeight }, 300)
+        })
+
+      gnb.find('ul').css('height', autoHeight)
     </script>
   </body>
 </html>
