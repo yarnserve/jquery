@@ -317,5 +317,27 @@
         </div>
       </main>
     </div>
+
+    <script>
+      // var header = $('header')
+      // var gnb = header.find('.gnb')
+
+      // gnb
+      //   .on('mouseover', function () {
+      //     header.stop().animate({ height: 400 }, 300)
+      //   })
+      //   .on('mouseleave', function () {
+      //     header.stop().animate({ height: 80 }, 300)
+      //   })
+
+      // gnb.find('ul').css('height', 400)
+
+      var header = $('header')
+      var gnb = header.find('.gnb')
+      var headerHeight = header.innerHeight()
+      var subMenuHeight = gnb.find('ul li').innerHeight()
+
+      console.log(subMenuHeight)
+    </script>
   </body>
 </html>

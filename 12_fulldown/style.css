@@ -26,8 +26,15 @@ header {
   color: #111;
   width: 100%;
   overflow: hidden;
+}
 
-  height: 300px;
+header::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 80px;
+  width: 100%;
+  border: 1px solid #ddd;
 }
 
 nav {
@@ -52,6 +59,11 @@ nav {
   height: 80px;
   line-height: 80px;
   padding: 0 60px;
+  font-weight: bold;
+}
+
+.gnb > li:hover > a {
+  color: orangered;
 }
 
 .gnb ul {
@@ -66,6 +78,10 @@ nav {
 .gnb ul a {
   display: block;
   padding: 12px 0;
+}
+
+.gnb ul li:hover a {
+  text-decoration: underline;
 }
 
 .social a {
