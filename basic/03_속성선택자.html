@@ -13,7 +13,7 @@
     <section>
         <h1>속성 선택자</h1>
         <ul id="list">
-            <li><a href="http://daum.net">다음 <span>바로가기</span></a></li>
+            <li><a href="http://daum.net" target="_blank">다음 <span>바로가기</span></a></li>
             <li><a href="http://google.com">구글</a></li>
             <li><a href="https://naver.com">네이버</a></li>
             <li style="display: none"><a href="http://github.com">깃헙</a></li>
@@ -42,13 +42,43 @@
             </p>
             <p id="f5">
                 <input type="radio" name="gender" value="남자" checked /> 남자
-                <input type="radio" name="gender" value="여자" /> 여자
+                <input type="radio" name="gender" value="여자" id="chk2" /> 여자
             </p>
         </form>
     </section>
 
     <script>
+        // $('#list a[target]').css('color', 'red') // target 속성이 있는...
+        // $('#list a[href^=https]').css('border', '5px solid green') // href속성 - https로 시작...
+        // $('#list a[href$=net]').css('border', '5px solid red') // href속성 - net으로 끝나는...
+        // $('#list a[href*=google]').css('border', '5px solid blue') // href속성 - google이 있는...
 
+        // $('input:text').css('background', 'red') // input 타입 - text인 ...
+        // $('input:password').css('background', 'green') // input 타입 - password인 ...
+
+        // $('li:hidden').css('display', 'block').css('background', 'red') // hidden 요소
+
+        // var v1 = $('#f3 :selected').val()
+        // var v2 = $('#f4 :checked').val()
+        // var v3 = $('#f5 :checked').val()
+        // console.log(v1)
+        // console.log(v2)
+        // console.log(v3)
+
+        // $('li:contains("구글")').css('background', 'orange') // 텍스트를 포함한...
+        // $('#f2').contents().css('background', 'blue')
+        // $('li a').has('span').css('border', '2px solid green')
+        // $('li').not(':first').css('border', '5px solid blue')
+
+        // $('form p').filter('#f5').css('background', 'red')
+        // $('form').find('#f4').css('background', 'orange')
+
+        // is() 메서드
+        console.log($('#list li').eq(3).is(':visible'))
+        console.log($('#list li').eq(3).is(':hidden'))
+        console.log($('#sel').is(':selected'))
+        console.log($('#chk').is(':checked'))
+        console.log($('#chk2').is(':checked'))
     </script>
 </body>
 
