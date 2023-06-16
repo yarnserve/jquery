@@ -17,7 +17,7 @@
 
         <div id="tab">
             <ul class="tab">
-                <li class="active"><a href="#x">tab 1</a></li>
+                <li><a href="#x">tab 1</a></li>
                 <li><a href="#x">tab 2</a></li>
                 <li><a href="#x">tab 3</a></li>
             </ul>
@@ -50,7 +50,18 @@
     </div>
 
     <script>
+        $('.tab li').eq(0).addClass('active')
+        $('.tab_content').hide().eq(0).show()
 
+        $('.tab li').click(function () {
+            $('.tab li').removeClass('active')
+            $(this).addClass('active')
+
+            $('.tab_content').hide()
+
+            var idx = $(this).index()
+            $('.tab_content').eq(idx).show()
+        })
     </script>
 </body>
 
