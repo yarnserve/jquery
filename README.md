@@ -1,1 +1,1 @@
-# jquery basic
+# jQuery Basic
