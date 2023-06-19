@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jquery</title>
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="./style.css">
+    <script src="../script/jquery-1.12.4.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <nav>
+                <div class="logo">가나다</div>
+                <ul class="gnb">
+                    <li>
+                        <a href="#">소개</a>
+                        <ul>
+                            <li><a href="#">인사말</a></li>
+                            <li><a href="#">연혁</a></li>
+                            <li><a href="#">수상내역</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">홍보</a>
+                        <ul>
+                            <li><a href="#">보도자료</a></li>
+                            <li><a href="#">TV광고</a></li>
+                            <li><a href="#">미디어 행사</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <div class="bars">
+                    <i class="xi-bars"></i>
+                </div>
+            </nav>
+        </header>
+
+        <div class="main">
+            <div class="slide"></div>
+            <section>
+                <h1>Lorem ipsum dolor sit amet.</h1>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam fugiat labore velit nihil quam!
+                    Labore delectus, rerum beatae soluta neque amet minus nobis omnis non deleniti explicabo id ratione
+                    magnam dolore optio at, molestiae, deserunt eaque eum ab nam! Inventore, assumenda laudantium? Eius
+                    qui amet eligendi quae perferendis molestias perspiciatis eveniet nihil est, veritatis reiciendis.
+                    Aliquam, vel, libero repellat quam consectetur vero iste possimus cum labore nulla est quasi
+                    aspernatur optio necessitatibus voluptates repellendus ex expedita explicabo nihil temporibus! Enim
+                    amet aliquam vero quibusdam eius, aut eveniet quod ratione iure veniam. Quam vero esse, saepe nobis
+                    ducimus ad amet ut.</p>
+            </section>
+        </div>
+
+    </div>
+
+    <script>
+        $('.gnb li').hover(
+            function () {
+                $(this).find('ul').stop().slideDown('fast')
+            },
+            function () {
+                $(this).find('ul').stop().slideUp('fast')
+            },
+        )
+    </script>
+</body>
+
+</html>
