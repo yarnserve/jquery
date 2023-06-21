@@ -19,10 +19,10 @@
     </div>
 
     <ul class="nav">
-        <li><a href="#">Html</a></li>
-        <li><a href="#">Css</a></li>
-        <li><a href="#">Javascript</a></li>
-        <li><a href="#">jQuery</a></li>
+        <li><a data-menuanchor="page1" href="#page1">Html</a></li>
+        <li><a data-menuanchor="page2" href="#page2">Css</a></li>
+        <li><a data-menuanchor="page3" href="#page3">Javascript</a></li>
+        <li><a data-menuanchor="page4" href="#page4">jQuery</a></li>
     </ul>
 
     <div class="fullpage">
@@ -56,10 +56,9 @@
             $('.nav').toggleClass('active')
 
             if ($(this).find('i').hasClass('xi-bars')) {
-                // xi - angle - left
-                //
+                $(this).find('i').attr('class', 'xi-angle-left')
             } else {
-                //
+                $(this).find('i').attr('class', 'xi-bars')
             }
         })
 
@@ -67,7 +66,10 @@
         $('.fullpage').fullpage({
             //options here
             autoScrolling: true,
-            scrollHorizontally: true
+            scrollHorizontally: true,
+            menu: '.nav',
+            anchors: ['page1', 'page2', 'page3', 'page4'],
+            navigation: true
         });
 
     </script>
