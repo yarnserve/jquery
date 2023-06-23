@@ -1,3 +1,12 @@
+.ready_box {
+    width: 1000px;
+    height: 1000px;
+    background-color: #eee;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 100px;
+}
+
 header {
     height: 80px;
     display: flex;
@@ -16,6 +25,12 @@ header {
     height: 80px;
     padding: 0 30px;
     line-height: 80px;
+}
+
+.gnb li.active a{
+    color: tomato;
+    font-weight: bold;
+    font-size: 16px;
 }
 
 .slider{

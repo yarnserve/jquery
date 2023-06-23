@@ -1,4 +1,8 @@
 $(function () {
+    // load page
+    $('.header').load('../inc/header.html')
+    $('.footer').load('../inc/footer.html')
+
     // slide
     $('.slide').slick({
         dots: true,
@@ -13,7 +17,7 @@ $(function () {
         arrows: false
     })  
     
-    $('.big_banner').parallax({ imageSrc: '../images/slide_03.jpg' });
+    $('.big_banner').parallax({ imageSrc: '../../images/slide_03.jpg' });
 
     ScrollReveal().reveal('.title_01', {
         distance : '50px',
